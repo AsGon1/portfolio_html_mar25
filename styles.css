@@ -1,62 +1,137 @@
 * {
-    padding: 0;
+    box-sizing: border-box;
     margin: 0;
 }
 
 body {
-
     background-image: url("https://img.freepik.com/fotos-premium/placa-circuitos-computadora-fondo-blanco_1312263-1031.jpg?semt=ais_hybrid");
     width: 100%;
-    height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 header {
-    background: linear-gradient(rgb(202, 202, 202) 80%, rgba(22, 41, 54,0));
+    background: linear-gradient(rgb(175, 203, 255) 80%, rgba(22, 41, 54,0));
+    height: 100px;
     width: 100%;
     position: fixed;
     z-index: 100;
 }
 
-header #header-nav{
-    font-size: 75px;
-    font-family: Arial, sans-serif;
+header .header-container {
+    display: grid;
+    grid-template-columns: 50% 50%; /* crea dos columnas */
+    grid-template-rows: 50% 50%; /* crea dos filas */
+    width: 100%;
 }
 
-header #job {
+header #header-name{
+    grid-column: 1; 
+    grid-row: 1;
+    font-size: 50px;
     font-family: Arial, sans-serif;
+    margin-left: 20px;
+}
+
+header #header-job {
+    grid-column: 1; 
+    grid-row: 2;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+header #header-nav{
+    grid-column: 2; 
+    grid-row: 2;
 }
 
 header #nav-links {
-    float: right;
-}
-
-header td {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     font-family: Arial, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     padding: 10px;
+    padding-top: 0%;
 }
 
-main #user-info{
-    padding-top: 200px;
+header .nav-links {
+    padding: 10px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+footer {
+    background: linear-gradient(rgba(22, 41, 54,0), rgb(175, 203, 255) 80%);
+    height: 100px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+footer #footer-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%; /* crea dos filas */
+
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+footer #header-copyright {
+    grid-column: 1; 
+    grid-row: 2;
+    font-family: Arial, sans-serif;
+}
+
+footer ul {
+    grid-column: 1; 
+    grid-row: 1;
+    padding: 0%;
+    margin: 0%;
+}
+
+footer ul.external-links-list li {
+    display: inline;
+    font-size: 30px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .fa-copyright{
+    color: black;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    padding-top: 150px;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    overflow: auto;
 }
 
 main .profile-image{
     height: 500px;
     width: 400px;
+    margin-left: 300px;
+    border-radius: 50% 50%;
 }
 
-main .profile-image h1{
-    
+main .profile-description{
+    float: right;
 }
 
-nav ul li {
-    float: left;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    padding: 10px;
+#contact-form * {
+    display: block;
 }
-

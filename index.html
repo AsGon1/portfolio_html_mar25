@@ -9,51 +9,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="./styles.css">
-    <title>Portfolio Asier|Inicio</title>
+    <title>Home|Asier Gonzalez</title>
 </head>
 
 <body>
     <header>
-            <table id="nav-links">
-                <tbody>
-                    <tr>
-                        <td class="profile">
-                            <h1 id="header-nav">Asier González</h1>
-                            <h2 id="job">Ingeniero Electrónico Industrial</h2>
-                        </td>
-                        <td>
-                            <nav>
-                                <ul id="nav-links" style="list-style-type: none">
-                                    <li class="nav-links"><a href="index.html"></a>Home</li>
-                                    <li class="nav-links"><a href="projects.html"></a>Projects</li>
-                                    <li class="nav-links"><a href="contact.html"></a>Contact</li>
-                                </ul>
-                            </nav>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="header-container">
+
+            <h1 id="header-name">Asier González Prieto</h1>
+            <h2 id="header-job">Ingeniero Electrónico Industrial</h2>
+
+            <nav id="header-nav">
+                <ul id="nav-links" style="list-style-type: none">
+                    <li class="nav-links active"><a href="./index.html"><i class="fa-solid fa-house-user"></i>Home</a></li>
+                    <li class="nav-links"><a href="./projects.html"><i class="fa-solid fa-briefcase"></i></i>Projects</a></li>
+                    <li class="nav-links"><a href="./contact.html"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
     <main>
-        <section id="user-info">
+        <figure>
             <img src="https://tiendaotakuplace.com/wp-content/uploads/2021/04/luffy-nueva-600x832.jpg" alt="Foto Asier" class="profile-image">
-            <h1 class="profile-image">Alex Garcia</h1>
-            <p class="profile-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum maiores possimus repudiandae consequatur, numquam, repellendus in perspiciatis culpa corrupti, dolores quo distinctio excepturi atque velit nemo assumenda voluptates aperiam!</p>
-        </section>
+            <figcaption class="profile-image-title">Asier González Prieto</figcaption>
+        </figure>
+
+        <p class="profile-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod harum maiores possimus repudiandae consequatur, 
+            numquam, repellendus in perspiciatis culpa corrupti, dolores quo distinctio excepturi atque velit nemo assumenda voluptates aperiam!
+        </p>
     </main>
     <footer>
-        <ul class="contact-list">
-            <li class="contact-link">
-                <a href="https//linkedin.com">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </li>
-            <li class="contact-link">
-                <a href="https//github.com">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </li>
-        </ul>
+        <div id="footer-container">
+            <ul class="external-links-list" style="list-style-type: none">
+                <li class="external-link">
+                    <a href="https//linkedin.com">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="external-link">
+                    <a href="https//github.com">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <h3 id="header-copyright"><i class="fa-regular fa-copyright"></i></i>Asier González Prieto</h3>
+        </div>
     </footer>
 </body>
 
