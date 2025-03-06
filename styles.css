@@ -5,16 +5,20 @@
 
 body {
     background-image: url("https://img.freepik.com/fotos-premium/placa-circuitos-computadora-fondo-blanco_1312263-1031.jpg?semt=ais_hybrid");
+    height: 100%;
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+/*--------------Estilos Header--------------*/
+
 header {
-    background: linear-gradient(rgb(175, 203, 255) 80%, rgba(22, 41, 54,0));
-    height: 100px;
+    background: linear-gradient(rgb(175, 203, 255) 75%, rgba(22, 41, 54,0));
+    height: 7rem;
     width: 100%;
+    padding: 0.5rem;
     position: fixed;
     z-index: 100;
 }
@@ -46,6 +50,7 @@ header #header-job {
 header #header-nav{
     grid-column: 2; 
     grid-row: 2;
+    width: 100%;
 }
 
 header #nav-links {
@@ -64,10 +69,16 @@ header .nav-links {
     padding-bottom: 0%;
 }
 
+header .nav-links a:hover {
+    background-color: whitesmoke;
+}
+
+/*--------------Estilos Footer--------------*/
 footer {
-    background: linear-gradient(rgba(22, 41, 54,0), rgb(175, 203, 255) 80%);
-    height: 100px;
+    background: linear-gradient(rgba(22, 41, 54,0), rgb(175, 203, 255) 75%);
+    height: 7rem;
     width: 100%;
+    padding: 0.5rem;
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -111,27 +122,153 @@ footer .fa-copyright{
     color: black;
 }
 
-main{
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-    padding-top: 150px;
+/*--------------Estilos Main-------------*/
+
+main {
     width: 100%;
-    height: calc(100vh - 4rem);
-    overflow: auto;
+    height: calc(100vh - 7rem);
+    padding-top: 7em;
+    overflow:auto;
 }
 
-main .profile-image{
+/*--------------Estilos Index--------------*/
+
+#user-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 72px;
+}
+
+.profile-description {
+    display: inline-block;
+    width: 50%;
+}
+
+.profile-image{
     height: 500px;
-    width: 400px;
-    margin-left: 300px;
-    border-radius: 50% 50%;
+    width: 500px;
+    border-radius: 50%;
 }
 
-main .profile-description{
-    float: right;
+.profile-description-title{
+    width: 100%;
+    font-size: 50px;
 }
 
+.profile-description-text{
+    width: 100%;
+    font-size: 35px;
+}
+
+.academic-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.academic-info-title{
+    margin-left: 72px;
+    margin-right: 72px;
+    font-size: 35px;
+}
+
+#user-academic-info hr, #user-knowledge hr {
+    height: 5px;
+    background-color: black;
+    margin-bottom: 1%;
+}
+
+#user-knowledge {
+    margin: 0;
+}
+
+.user-knowledge-title{
+    margin-left: 72px;
+    margin-right: 72px;
+    font-size: 35px;
+}
+
+.user-knowledge-list{
+    margin-left: 72px;
+    margin-right: 72px;
+    font-size: 20px;
+}
+
+.user-knowledge-list ul {
+    flex-wrap:wrap;
+    flex-direction:column;
+    display:flex;
+
+    height: 100px;
+    width: 100px;
+}
+
+.user-knowledge-list li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/*--------------Estilos Projects--------------*/
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+}
+
+.project{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.project__info {
+    padding: 1rem;
+}
+
+.project img {
+    width: 100%;
+}
+
+.project__link {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.project__link button {
+    width: 100%;
+
+}
+
+/*--------------Estilos Contacto--------------*/
 #contact-form * {
     display: block;
+}
+
+
+@media  (min-width:768px) {
+    .project{
+        width: 40%;
+    }
+    .experiences-list{
+        grid: auto-flow / 1fr 1fr;
+        gap: 1rem;
+    }
+}
+@media  (min-width:1024px) {
+    .project {
+        width: 22%;
+    }
+    .experiences-list{
+        grid: auto-flow / 1fr 1fr 1fr;
+        gap: 1rem;
+    }
 }
