@@ -9,6 +9,7 @@ body {
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -59,7 +60,7 @@ header #nav-links {
     justify-content: flex-end;
     font-family: Arial, sans-serif;
     font-size: 25px;
-    padding: 10px;
+
     padding-top: 0%;
 }
 
@@ -67,6 +68,7 @@ header .nav-links {
     padding: 10px;
     padding-top: 0%;
     padding-bottom: 0%;
+    list-style-type: none;
 }
 
 header .nav-links a:hover {
@@ -79,6 +81,9 @@ footer {
     height: 7rem;
     width: 100%;
     padding: 0.5rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -128,7 +133,7 @@ main {
     width: 100%;
     height: calc(100vh - 7rem);
     padding-top: 7em;
-    overflow:auto;
+    overflow: auto;
 }
 
 /*--------------Estilos Index--------------*/
@@ -182,6 +187,10 @@ main {
     margin-bottom: 1%;
 }
 
+.center img{
+    width: 100%;
+}
+
 #user-knowledge {
     margin: 0;
 }
@@ -204,7 +213,7 @@ main {
     display:flex;
 
     height: 100px;
-    width: 100px;
+    width: 100%;
 }
 
 .user-knowledge-list li {
@@ -213,13 +222,26 @@ main {
     flex-direction: column;
 }
 
+
 /*--------------Estilos Projects--------------*/
+
+.projects h2{
+    margin-left: 20px;
+}
+
+.projects hr {
+    margin-left: 20px;
+    margin-right: 40px;
+    height: 5px;
+    background-color: black;
+}
 
 .project-list {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding: 1rem;
+    justify-content: space-evenly;
 }
 
 .project{
@@ -227,6 +249,7 @@ main {
     border: 1px solid black;
     border-radius: 0.5rem;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .project__info {
@@ -245,30 +268,145 @@ main {
 
 .project__link button {
     width: 100%;
-
 }
 
 /*--------------Estilos Contacto--------------*/
+
+#contact-form {
+    padding: 2rem;
+}
+
 #contact-form * {
     display: block;
 }
 
+.newsletter-input * {
+    display: inline-block !important;
+}
 
-@media  (min-width:768px) {
+#contact-form label {
+    margin-top: 0.5rem;
+}
+
+#contact-form textarea {
+    width: 100%;
+}
+
+#contact-form legend{
+    font-weight:bold;
+}
+
+
+@media  (max-width:768px) {
+
+    main {
+        width: 100%;
+        height: calc(100vh - 3rem);
+        padding-top: 3rem;
+        overflow: auto;
+    }
+
+    header, footer{
+        height: 3rem;
+    }
+
+    header #header-name{
+        font-size: 10px;
+    }
+
+    header #header-job{
+        font-size: 7px;
+    }
+
+    header #nav-links {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 7px;
+    }
+
+    footer {
+        background: linear-gradient(rgba(22, 41, 54,0), rgb(175, 203, 255) 75%);
+    }
+
+    footer ul.external-links-list li {
+        display: inline;
+        font-size: 10px;
+    }
+
+    footer #header-copyright {
+        font-size: 10px;
+    }
+
+    #user-info{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    
+    .profile-description {
+        display: inline-block;
+        width: 50%;
+    }
+    
+    .profile-image{
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+    }
+    
+    .profile-description-title{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .profile-description-text{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .academic-info-title{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .user-knowledge-title{
+        margin-left: 10px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    .user-knowledge-list{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    #user-academic-info hr, #user-knowledge hr {
+        height: 3px;
+        border-style: none;
+    }
+    
     .project{
         width: 40%;
     }
-    .experiences-list{
-        grid: auto-flow / 1fr 1fr;
-        gap: 1rem;
+
+    .projects hr {
+        height: 3px;
+        border-style: none;
+    }
+
+    .project__link button {
+        width: 100%;
+        font-size: 8px;
     }
 }
+
 @media  (min-width:1024px) {
+
     .project {
         width: 22%;
-    }
-    .experiences-list{
-        grid: auto-flow / 1fr 1fr 1fr;
-        gap: 1rem;
     }
 }
