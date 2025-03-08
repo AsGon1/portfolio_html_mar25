@@ -220,6 +220,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 1%;
 }
 
 
@@ -381,7 +382,12 @@ main {
     .user-knowledge-list{
         margin-left: 10px;
         margin-right: 10px;
-        font-size: 20px;
+        font-size: 10px;
+    }
+
+    .user-knowledge-list ul{
+        margin-left: 10px;
+        padding-left: 0;
     }
 
     #user-academic-info hr, #user-knowledge hr {
@@ -402,6 +408,119 @@ main {
         width: 100%;
         font-size: 8px;
     }
+}
+
+@media (min-width: 769px) and (max-width: 859px) {
+    
+    main {
+        width: 100%;
+        height: calc(100vh - 5rem);
+        padding-top: 5rem;
+        overflow: auto;
+    }
+
+    header, footer{
+        height: 5rem;
+    }
+
+    header #header-name{
+        font-size: 20px;
+    }
+
+    header #header-job{
+        font-size: 15px;
+    }
+
+    header #nav-links {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 15px;
+    }
+
+    footer {
+        background: linear-gradient(rgba(22, 41, 54,0), rgb(175, 203, 255) 75%);
+    }
+
+    footer ul.external-links-list li {
+        display: inline;
+        font-size: 20px;
+    }
+
+    footer #header-copyright {
+        font-size: 15px;
+    }
+
+    #user-info{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    
+    .profile-description {
+        display: inline-block;
+        width: 50%;
+    }
+    
+    .profile-image{
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+    }
+    
+    .profile-description-title{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .profile-description-text{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .academic-info-title{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    .user-knowledge-title{
+        margin-left: 10px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    .user-knowledge-list{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 10px;
+    }
+
+    .user-knowledge-list ul{
+        margin-left: 10px;
+        padding-left: 0;
+    }
+
+    #user-academic-info hr, #user-knowledge hr {
+        height: 3px;
+        border-style: none;
+    }
+    
+    .project{
+        width: 40%;
+    }
+
+    .projects hr {
+        height: 3px;
+        border-style: none;
+    }
+
+    .project__link button {
+        width: 100%;
+        font-size: 8px;
+    }
+
 }
 
 @media  (min-width:1024px) {
