@@ -71,6 +71,10 @@ header .nav-links {
     list-style-type: none;
 }
 
+header .nav-links a {
+    text-decoration: none;
+}
+
 header .nav-links a:hover {
     background-color: whitesmoke;
 }
