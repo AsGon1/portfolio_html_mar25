@@ -297,6 +297,15 @@ main {
     font-weight:bold;
 }
 
+#contact-form .form-actions-buttons{
+    width: 100%;
+    padding-top: 5px;
+}
+
+#contact-form .form-actions-buttons button{
+    margin: 2px;
+    display: inline-block;
+}
 
 @media  (max-width:768px) {
 
